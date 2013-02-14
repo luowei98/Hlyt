@@ -5,7 +5,7 @@
         <title>@ViewBag.Title - Hlyt Application</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         @Styles.Render("~/Content/css")
-        @Styles.Render("~/Content/themes/base/css")
+        @*@Styles.Render("~/Content/themes/base/css")*@
         <meta name="viewport" content="width=device-width" />
     </head>
     <body>
@@ -16,50 +16,60 @@
             <div id="masked"></div>
             <div id="mask">
                 <div id="intro">
-                <h2>您好!</h2>
-                <h3>欢迎来到活力羽童</h3>
-                <div class="divider"></div>
+                    <h2>您好!</h2>
+                    <h3>欢迎来到活力羽童</h3>
+                    <div class="divider"></div>
                     <h4>SUZHOU HUO LI YU TONG<br />Childeren's Badminiton Club</h4>
                 </div>
             </div>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("Hlyt - ASP.NET MVC 4 & EF 5", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("��ҳ", "Index", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            <nav>
+                <ul class="skrollrNav">
+                    <li><a href="">公司简介</a></li>
+                    <li><a href="#work">教练介绍</a></li>
+                    <li><a href="#contact">活动图片及文字</a></li>
+                    <li><a href="#contact">课程介绍</a></li>
+                    <li><a href="#contact">特色介绍</a></li>
+                    <li><a href="/blog">器材推荐</a></li>
+                </ul>
+            </nav>
         </header>
+
         <div id="body">
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
             </section>
         </div>
+
         <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year -  <a href="http://weblogs.asp.net/shijuvarghese/">Shiju Varghese</a></p>
-                </div>
-                <div class="float-right">
-                    <ul id="social">
-                       
-                        <li><a href="http://facebook.com/shijuvar" class="facebook">Facebook</a></li>
-                        <li><a href="http://twitter.com/shijucv" class="twitter">Twitter</a></li>
-                    </ul>
+            <div id="foot_wrapper" class="clearfix">
+                <div id="thanks"><img src="/Images/hlyt-logo-small.png" alt="Caava Design"><span>感谢您的关注!</span></div>
+                <div id="footer" class="clearfix">
+                    <div class="col left">
+                        <span class="tweet"><p class="loading">loading weibo...</p></span>
+                        <a href="https://twitter.com/caavadesign" target="_blank" class="tweet-follow">在微博上关注我们</a>
+                    </div>
+                    <div class="col middle">
+                        <h2><span>友情链接</span></h2>
+                        <ul>
+                            <li><a href="http://caavadesign.tumblr.com/" target="_blank">tumblr</a></li>
+                            <li><a href="https://www.facebook.com/caavadesign" target="_blank">facebook</a></li>
+                            <li><a href="http://www.behance.net/codysmall" target="_blank">Behance Network</a></li>
+                            <li><a href="http://www.linkedin.com/pub/cody-small/8/693/705" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="col right">
+                        <h2><span>Latest Blog Posts</span></h2>
+
+                        <h3><a href="http://www.caavadesign.com/typography/our-latest-work-i-love-wednesdays-photography-branding-2/">Our Latest Work :: I Love Wednesdays Photography Branding</a></h3>
+                        <p class="meta">February 7</p>
+                        <a href="/blog/" class="blog-follow">Check out the Blog!</a>
+                    </div>
                 </div>
             </div>
         </footer>
 
-         @Scripts.Render("~/Scripts/js")
+        @Scripts.Render("~/Scripts/js")
         @RenderSection("scripts", required: false)
 
    </body>

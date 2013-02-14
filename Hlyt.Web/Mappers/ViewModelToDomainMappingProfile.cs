@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Hlyt.Domain.Commands.Security;
 using Hlyt.Web.ViewModels;
 
 
@@ -16,7 +15,6 @@ namespace Hlyt.Web.Mappers
         {
             //Mapper.CreateMap<CategoryFormModel, CreateOrUpdateCategoryCommand>();
             //Mapper.CreateMap<ExpenseFormModel, CreateOrUpdateExpenseCommand>();
-            Mapper.CreateMap<UserFormModel, UserRegisterCommand>();
         }
     }
 }
