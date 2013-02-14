@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Hlyt Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/themes/base/css")
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+        <header>
+            <div id="section1">
+                <img src="/Images/hlyt-logo.png" alt="Caava Design">
+            </div>
+            <div id="masked"></div>
+            <div id="mask">
+                <div id="intro">
+                <h2>您好!</h2>
+                <h3>欢迎来到活力羽童</h3>
+                <div class="divider"></div>
+                    <h4>SUZHOU HUO LI YU TONG<br />Childeren's Badminiton Club</h4>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("Hlyt - ASP.NET MVC 4 & EF 5", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("��ҳ", "Index", "Home")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year -  <a href="http://weblogs.asp.net/shijuvarghese/">Shiju Varghese</a></p>
+                </div>
+                <div class="float-right">
+                    <ul id="social">
+                       
+                        <li><a href="http://facebook.com/shijuvar" class="facebook">Facebook</a></li>
+                        <li><a href="http://twitter.com/shijucv" class="twitter">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+         @Scripts.Render("~/Scripts/js")
+        @RenderSection("scripts", required: false)
+
+   </body>
+</html>
