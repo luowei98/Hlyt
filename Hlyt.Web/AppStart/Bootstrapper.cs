@@ -38,7 +38,7 @@ namespace Hlyt.Web.AppStart
             //    .Where(t => t.Name.EndsWith("Repository"))
             //    .AsImplementedInterfaces().InstancePerHttpRequest();
 
-            Assembly services = Assembly.Load("Hlyt.Domain");
+            Assembly services = Assembly.Load("Hlyt.Data");
 
             builder.RegisterAssemblyTypes(services)
                 .AsClosedTypesOf(typeof (ICommandHandler<>)).InstancePerHttpRequest();
