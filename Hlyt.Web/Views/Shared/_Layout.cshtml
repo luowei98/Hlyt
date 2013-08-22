@@ -2,10 +2,9 @@
 <html lang="zh">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - Hlyt Application</title>
+        <title>@ViewBag.Title - 苏州活力羽童青少年羽毛球俱乐部</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         @Styles.Render("~/Content/css")
-        @*@Styles.Render("~/Content/themes/base/css")*@
         <meta name="viewport" content="width=device-width" />
     </head>
     <body>
@@ -15,61 +14,68 @@
             </div>
             <div id="masked"></div>
             <div id="mask">
-                <div id="intro">
+                <div id="webcome">
                     <h2>您好!</h2>
                     <h3>欢迎来到活力羽童</h3>
                     <div class="divider"></div>
-                    <h4>SUZHOU HUO LI YU TONG<br />Childeren's Badminiton Club</h4>
+                    <h4>SUZHOU HUO LI YU TONG<br />Adolescents' Badminiton Club</h4>
                 </div>
             </div>
             <nav>
                 <ul class="skrollrNav">
-                    <li><a href="">公司简介</a></li>
-                    <li><a href="#work">教练介绍</a></li>
-                    <li><a href="#contact">活动图片及文字</a></li>
-                    <li><a href="#contact">课程介绍</a></li>
-                    <li><a href="#contact">特色介绍</a></li>
+                    <li><a href="#">俱乐部简介</a></li>
+                    <li><a href="#">教练介绍</a></li>
+                    <li><a href="#">活动介绍</a></li>
+                    <li><a href="#">课程介绍</a></li>
+                    <li><a href="#">特色介绍</a></li>
                     <li><a href="/blog">器材推荐</a></li>
+                    <li><a href="#">友情链接</a></li>
                 </ul>
             </nav>
         </header>
 
         <div id="body">
             @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
+            <div class="content-wrapper main-content clear-fix">
                 @RenderBody()
-            </section>
+            </div>
         </div>
 
-        <footer>
+        <footer class="navpos">
             <div id="foot_wrapper" class="clearfix">
                 <div id="thanks"><img src="/Images/hlyt-logo-small.png" alt="Caava Design"><span>感谢您的关注!</span></div>
                 <div id="footer" class="clearfix">
                     <div class="col left">
-                        <span class="tweet"><p class="loading">loading weibo...</p></span>
-                        <a href="https://twitter.com/caavadesign" target="_blank" class="tweet-follow">在微博上关注我们</a>
+                        @*<span class="tweet"><p class="loading">loading tweets...</p></span>*@
+                        <a href="https://www.weibo.com/" target="_blank" class="weibo">在微博上关注我们</a>
                     </div>
                     <div class="col middle">
                         <h2><span>友情链接</span></h2>
                         <ul>
-                            <li><a href="http://caavadesign.tumblr.com/" target="_blank">tumblr</a></li>
-                            <li><a href="https://www.facebook.com/caavadesign" target="_blank">facebook</a></li>
-                            <li><a href="http://www.behance.net/codysmall" target="_blank">Behance Network</a></li>
-                            <li><a href="http://www.linkedin.com/pub/cody-small/8/693/705" target="_blank">LinkedIn</a></li>
+                            <li><a href="http://www.easyhappysz.com/" target="_blank">易禾心理咨询中心</a></li>
+                            <li><a href="http://www.baidu.com//" target="_blank">百度</a></li>
+                            <li><a href="http://www.google.com//" target="_blank">谷歌</a></li>
                         </ul>
                     </div>
                     <div class="col right">
-                        <h2><span>Latest Blog Posts</span></h2>
-
-                        <h3><a href="http://www.caavadesign.com/typography/our-latest-work-i-love-wednesdays-photography-branding-2/">Our Latest Work :: I Love Wednesdays Photography Branding</a></h3>
-                        <p class="meta">February 7</p>
-                        <a href="/blog/" class="blog-follow">Check out the Blog!</a>
-                    </div>
+                         <a href="https://www.qq.com/" target="_blank" class="qq">加入我们的QQ群</a>
+                   </div>
                 </div>
             </div>
         </footer>
 
         @Scripts.Render("~/Scripts/js")
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+                $('body').pageScroller({
+                    navigation: 'nav'
+                });
+
+            });
+            
+        </script>
         @RenderSection("scripts", required: false)
 
    </body>

@@ -1,0 +1,97 @@
+#coach.wrapper{
+    font-family: Verdana;
+    font-size:11px;
+    width:600px;
+    height:600px;
+    position:relative;
+    top:150px;
+    left:200px;
+}
+.coach-images img{
+    display:none;
+    position:absolute;
+    left:46px;
+    top:6px;
+}
+.coach-circleBig{
+    position:absolute;
+    left:40px;
+    top:0;
+    width:418px;
+    height:418px;
+    background:transparent url(../Images/coach-circlebg.png) no-repeat top left;
+}
+.coach-menu{
+    position:absolute;
+    width:101px;
+    height:74px;
+    top:200px;
+    left:280px;
+    z-index:999;
+}
+a.coach-about, a.coach-portfolio, a.coach-contact{
+    float:left;
+    clear:both;
+    height:23px;
+    margin-bottom:10px;
+    width:48px;
+    text-indent:-2000000px;
+    opacity:0.9;
+    background:transparent url(../Images/coach-menu.png) no-repeat top left;
+}
+a.coach-about{
+    margin-left: 40px;
+}
+a.coach-portfolio{
+    margin-left: 30px;
+    background-position:-49px 0px;
+}
+a.coach-contact{
+    margin-left: 10px;
+    background-position:-96px 0px;
+}
+a.coach-about:hover, a.coach-portfolio:hover, a.coach-contact:hover{
+    opacity:1.0;
+}
+.coach-circle{
+    margin-top:-88px;
+    margin-left:-88px;
+    width:176px;
+    height:176px;
+    position:absolute;
+    left:0;
+    top:0;
+    background:transparent url(../Images/coach-circle.png) no-repeat top left;
+    z-index:10;
+    opacity:0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+.coach-desc{
+    width:120px;
+    margin:40px auto;
+    text-align:center;
+}
+.desc-warp-hide {
+    display: none;
+}
+.coach-desc ul{
+    list-style:none;
+    text-align:center;
+}
+.coach-desc ul li{
+    line-height:30px;
+    font-weight:bold;
+    color:#333;
+    text-decoration:none;
+    font-size:1.3em;
+    cursor: pointer;
+}
+.coach-desc ul li:hover{
+    color:#ef4426;
+}
+.coach-thumbs a img{
+    border:3px solid #f9f9f9;
+    -moz-box-shadow:1px 1px 2px #999;
+    -webkit-box-shadow:1px 1px 2px #999;
+    box-shadow:1px 1px 2px #999;
+}

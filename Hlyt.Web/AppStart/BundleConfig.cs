@@ -26,7 +26,14 @@ namespace Hlyt.Web.AppStart
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                 "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/style.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Content/tiny_circleslider.css",
+                "~/Content/circular_portfolio.css",
+                "~/Content/coin_slider_styles.css",
+                "~/Content/colorbox.css",
+                "~/Content/thumbnail_grid.css",
+                "~/Content/circle_hover_effects.css",
+                "~/Content/style.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                 "~/Content/themes/base/jquery.ui.core.css",

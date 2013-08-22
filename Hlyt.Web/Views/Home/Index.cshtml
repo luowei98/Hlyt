@@ -1,10 +1,52 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "首页";
 }
 
-@*<h2>@ViewBag.Message</h2>
-<p>
-    Demo web app using ASP.NET MVC 4, EF Code First, Autofac and Windows Azure
-</p>
-<p></p>
-*@
+@Html.Partial("_Intro")
+@Html.Partial("_Coach")
+@Html.Partial("_Event")
+@Html.Partial("_Course")
+@Html.Partial("_Feature")
+@Html.Partial("_Hardware")
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#rotatescroll').tinycircleslider({ lightbox: true, snaptodots: true, radius: 187, interval: true, hidedots: false });
+
+            $('#coach-menu > a').cirpor();
+
+            $('.coach-desc li').click(function () {
+                var desc = $(this).children('.desc-warp-hide').html();
+                if (desc) {
+                    var rd = $('#coach .row .right');
+                    rd.fadeOut(200, function () {
+                        rd.children('div').html(desc);
+                        rd.fadeIn(1000);
+                    });
+                }
+            });
+
+            $('#coin-slider').coinslider({ width: 800, height: 400, links: false });
+
+            $('.course_nav li').click(function () {
+                $(this).parent().children('li').removeClass('active');
+                $(this).addClass("active");
+                var desc = $(this).children('.course_desc_hide').html();
+                if (desc) {
+                    var rd = $('#course .row .course_desc div');
+                    rd.fadeOut(200, function () {
+                        rd.html(desc);
+                        rd.fadeIn(1000);
+                    });
+                }
+            });
+
+            $(".course_link").colorbox({ inline: true, width: "50%", height: "80%" });
+            $(".feature_link").colorbox({ inline: true, width: "50%", height: "80%" });
+
+            Grid.init({ minHeight: 300 });
+        });
+    </script>	
+}

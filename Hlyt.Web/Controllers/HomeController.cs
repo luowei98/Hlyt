@@ -7,12 +7,6 @@ namespace Hlyt.Web.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to YeHi!";
-            return View();
-        }
-
-        public ActionResult About()
-        {
             return View();
         }
     }

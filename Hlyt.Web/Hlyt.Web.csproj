@@ -146,6 +146,9 @@
     <Compile Include="ViewModels\UserFormModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\circular_portfolio.css" />
+    <Content Include="Content\coin_slider_styles.css" />
+    <Content Include="Content\colorbox.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -207,17 +210,60 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\thumbnail_grid.css" />
+    <Content Include="Content\tiny_circleslider.css" />
+    <Content Include="Content\circle_hover_effects.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\bg_course.jpg" />
+    <Content Include="Images\bg-dot.png" />
+    <Content Include="Images\bg-rotatescroll.png" />
+    <Content Include="Images\bg-thumb.png" />
     <Content Include="Images\bg_nav.png" />
     <Content Include="Images\bg_thanks.jpg" />
+    <Content Include="Images\circlehover\1.jpg" />
+    <Content Include="Images\circlehover\2.jpg" />
+    <Content Include="Images\circlehover\3.jpg" />
+    <Content Include="Images\coach-circle.png" />
+    <Content Include="Images\coach-circlebg.png" />
+    <Content Include="Images\coach-menu.png" />
+    <Content Include="Images\coach-zhu1.png" />
+    <Content Include="Images\coach-zhu2.png" />
+    <Content Include="Images\coach-zhu3.png" />
+    <Content Include="Images\event1.jpg" />
+    <Content Include="Images\event2.jpg" />
+    <Content Include="Images\hdr1.jpg" />
+    <Content Include="Images\hdr2.jpg" />
+    <Content Include="Images\hdr3.jpg" />
+    <Content Include="Images\hdr4.jpg" />
     <Content Include="Images\hlyt-logo-small.png" />
-    <Content Include="Images\section1_mask.png" />
-    <Content Include="Images\Top-Circle.jpg" />
+    <Content Include="Images\colorbox\controls.png" />
+    <Content Include="Images\colorbox\loading.gif" />
+    <Content Include="Images\intro.jpg" />
+    <Content Include="Images\qq.png" />
+    <Content Include="Images\thumbnailgrid\1.jpg" />
+    <Content Include="Images\thumbnailgrid\2.jpg" />
+    <Content Include="Images\thumbnailgrid\3.jpg" />
+    <Content Include="Images\thumbnailgrid\4.jpg" />
+    <Content Include="Images\thumbnailgrid\small\1.jpg" />
+    <Content Include="Images\thumbnailgrid\small\2.jpg" />
+    <Content Include="Images\thumbnailgrid\small\3.jpg" />
+    <Content Include="Images\thumbnailgrid\small\4.jpg" />
+    <Content Include="Images\top_mask.png" />
+    <Content Include="Images\top_circle.jpg" />
     <Content Include="Images\hlyt-logo.png" />
+    <Content Include="Images\weibo.png" />
     <Content Include="Scripts\jquery-1.9.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.circularportfolio.js" />
+    <Content Include="Scripts\jquery.coinslider.js" />
+    <Content Include="Scripts\jquery.colorbox.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.pagescroller.lite.js" />
+    <Content Include="Scripts\jquery.path.js" />
+    <Content Include="Scripts\jquery.thumbnailgrid.js" />
+    <Content Include="Scripts\jquery.tinycircleslider.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -228,19 +274,6 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
@@ -273,7 +306,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
@@ -283,6 +318,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Views\Home\_Intro.cshtml" />
+    <Content Include="Views\Home\_Coach.cshtml" />
+    <None Include="Views\Home\_Event.cshtml" />
+    <None Include="Views\Home\_Course.cshtml" />
+    <None Include="Views\Home\_Feature.cshtml" />
+    <None Include="Views\Home\_Hardware.cshtml" />
+    <Content Include="Views\Home\_Syllabus.cshtml" />
+    <Content Include="Views\Home\_Recruit.cshtml" />
+    <Content Include="Views\Home\_SportPychology.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -302,11 +346,10 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3344</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:3355/</IISUrl>
+          <IISUrl>http://localhost:3356/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl>http://localhost:3344/</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
