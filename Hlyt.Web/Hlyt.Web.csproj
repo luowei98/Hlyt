@@ -320,10 +320,10 @@
     <None Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\_Intro.cshtml" />
     <Content Include="Views\Home\_Coach.cshtml" />
-    <None Include="Views\Home\_Event.cshtml" />
-    <None Include="Views\Home\_Course.cshtml" />
-    <None Include="Views\Home\_Feature.cshtml" />
-    <None Include="Views\Home\_Hardware.cshtml" />
+    <Content Include="Views\Home\_Event.cshtml" />
+    <Content Include="Views\Home\_Course.cshtml" />
+    <Content Include="Views\Home\_Feature.cshtml" />
+    <Content Include="Views\Home\_Hardware.cshtml" />
     <Content Include="Views\Home\_Syllabus.cshtml" />
     <Content Include="Views\Home\_Recruit.cshtml" />
     <Content Include="Views\Home\_SportPychology.cshtml" />
